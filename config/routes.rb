@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :users do
-    resources :posts
-    resources :comments
-    resources :replies
+  resources :users, shallow: true do
+    resources :posts do
+      resources :comments do
+        resources :replies
+      end
+    end
+
+
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
