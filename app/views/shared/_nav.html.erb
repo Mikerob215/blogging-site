@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -13,18 +13,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><%=link_to "Home", root_path %></li>
+        <li class="active"><%=link_to "Home", root_path, class: "btn btn-primary" %></li>
         <li><a href="#"></a></li>
 
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>Posts</li>
-        <li>Users</li>
+        <li><a href="#">Posts</a></li>
+        <li> <%= link_to "Users", users_path, class: "btn btn-primary" %></li>
         <!-- test if user is logged in -->
-        <li>Sign in</li>
-        <li>Sign up</li>
-        <li>Sign out</li>
+        <li> <%= link_to "Sign Up", new_user_path, class: "btn btn-primary"%></li>
+        <li><a href="#">Sign in</a></li>
+        <li><a href="#">Sign out</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

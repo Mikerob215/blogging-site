@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <%= render 'shared/errors' %>
+    <div class="form-group">
+
+      <%= form_for(@user) do |f| %>
+
+      <%= label_tag :name, "Name:" %>
+      <%= f.text_field :name, class: "form-control" %>
+      <%= label_tag :email, "Email Address:" %>
+      <%= f.text_field :email, class: "form-control" %>
+      <%= label_tag :password, "Password:" %>
+      <%= f.password_field :password, class: "form-control" %>
+      <%= label_tag :password_confirmation, "Password confirmation:" %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+      <br>
+      <%= f.submit "Create account", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
