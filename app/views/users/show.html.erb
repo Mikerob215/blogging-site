@@ -1,0 +1,5 @@
+<% @users.each do |t| %>
+<%= t.name %>
+<%= t.email %>
+<%= t.posts.first.body %>
+<% end %>
