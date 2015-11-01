@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.5'
 #gem 'sass-rails', '>= 3.2'
 gem 'bootswatch-rails', '~> 3.3', '>= 3.3.5'
+# Need this to avoid refresh error with bootstrap dropdown
+gem 'jquery-turbolinks'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
