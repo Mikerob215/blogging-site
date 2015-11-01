@@ -13,7 +13,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><%=link_to "Home", root_path, class: "btn btn-primary" %></li>
+        <li class="active"><%=link_to "Home", root_path %></li>
         <li><a href="#"></a></li>
 
       </ul>
@@ -23,8 +23,8 @@
         <li> <%= link_to "Users", users_path %></li>
         <!-- test if user is logged in -->
         <li> <%= link_to "Sign Up", new_user_path %></li>
-        <li><a href="#">Sign in</a></li>
-        <li><a href="#">Sign out</a></li>
+        <li><%= link_to "Sign in", login_path %></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
