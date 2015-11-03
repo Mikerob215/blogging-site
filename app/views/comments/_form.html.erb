@@ -1,0 +1,6 @@
+<%= form_for [@post, @comment = Comment.new] do |f| %>
+<%= f.text_field :body %>
+
+<br>
+<%= f.submit %>
+<% end %>

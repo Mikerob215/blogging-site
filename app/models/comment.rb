@@ -1,5 +1,7 @@
 class Comment < ActiveRecord::Base
-  has_many :replies
-  belongs_to :user
-  belongs_to :post
+
+  belongs_to :commentable, :polymorphic => true
+  has_many :comments, :as => :commentable
+  accepts_nested_attributes_for :comments
+
 end

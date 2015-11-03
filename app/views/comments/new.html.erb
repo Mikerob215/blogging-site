@@ -1,0 +1,7 @@
+<%= form_for [@comment = Comment.new] do |f| %>
+
+  <%= f.text_field :title, class: "form-control" %>
+  <%= f.text_field :body, class: "form-control" %>
+  <%= f.submit "submit" %>
+
+<% end %>
