@@ -19,6 +19,9 @@
         <% end %>
 
       </li>
+      <li class="list-group-item">
+        <%= link_to "Like", like_path, method: :get, remote: true, class: "btn btn-primary like-button" %>
+      </li>
     </ul>
     <ul class="list-group">
 
@@ -30,3 +33,9 @@
 <div class="col-md-3">
 </div>
 </div>
+<script type="text/javascript">
+$(".like").on("ajax:complete", function(element, data, status){
+  console.log("test");
+  $(".like").hide();
+});
+</script>

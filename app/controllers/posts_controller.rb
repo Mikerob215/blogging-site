@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def show
-    # @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def index
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       render 'edit'
-  end
+    end
   end
 
   def create
@@ -32,13 +32,17 @@ class PostsController < ApplicationController
       redirect_to root_path
     else
       render new
+    end
   end
-end
+
+  def like
+    render nothing: true
+  end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
+    # def set_post
+    #   @post = Post.find(params[:id])
+    # end
 
   def post_params
     params.require(:post).permit(:title, :body, :user_id, :id)
